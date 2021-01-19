@@ -21,16 +21,15 @@ class CNNBlock(nn.Module):
 class Yolov1(nn.Module):
     def __init__(self, in_channels=3, **kwargs):
         super(Yolov1, self).__init__()
-        self.architecture = architecture_config
         self.in_channels = in_channels
-        self.darknet = self._create_backbone(self.architecture)
+        self.darknet = self._create_backbone()
         self.fcs = self._create_head(**kwargs)
 
     def forward(self, x):
         x = self.darknet(x)
         return self.fcs(x)
 
-    def _create_backbone(self, architecture):
+    def _create_backbone(self):
         ''' Exercise 1: complete the backbone construction'''
         layers = []
 
