@@ -74,7 +74,7 @@ class VOCDataset(torch.utils.data.Dataset):
             '''
             i,j = 0,0
             box_wrt_cell = 1,2,3,4
-            label_matrix[i,j,:] = range(self.C+5)
+            label_matrix[i,j,:] = torch.arange(self.C+5)
 
 
         return label_matrix
