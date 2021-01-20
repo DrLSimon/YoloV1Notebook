@@ -13,7 +13,6 @@ drive.mount('/content/drive', force_remount=True)
 if not os.path.exists('/content/drive/MyDrive/YoloV1Notebook'):
   print('====== Cloning the github repository')
   os.chdir('/content/drive/MyDrive')
-  !pwd
   !git clone https://github.com/DrLSimon/YoloV1Notebook
 os.chdir('/content/drive/MyDrive/YoloV1Notebook/')
 ```
